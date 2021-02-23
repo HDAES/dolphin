@@ -1,20 +1,5 @@
 name: dolphin
 description: A new Flutter application.
-
-# The following line prevents the package from being accidentally published to
-# pub.dev using `pub publish`. This is preferred for private packages.
-publish_to: 'none' # Remove this line if you wish to publish to pub.dev
-
-# The following defines the version and build number for your application.
-# A version number is three numbers separated by dots, like 1.2.43
-# followed by an optional build number separated by a +.
-# Both the version and the builder number may be overridden in flutter
-# build by specifying --build-name and --build-number, respectively.
-# In Android, build-name is used as versionName while build-number used as versionCode.
-# Read more about Android versioning at https://developer.android.com/studio/publish/versioning
-# In iOS, build-name is used as CFBundleShortVersionString while build-number used as CFBundleVersion.
-# Read more about iOS versioning at
-# https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html
 version: 1.0.0+1
 
 environment:
@@ -23,12 +8,23 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-
-
-  # The following adds the Cupertino Icons font to your application.
-  # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.0
-
+  # 状态管理
+  provider: ^4.3.3
+  # 本地缓存
+  shared_preferences: ^0.5.12+4
+  # 网络请求
+  dio: ^3.0.10
+  # 平台信息
+  device_info: ^1.0.0
+  # 包详情
+  package_info: ^0.4.3+4
+  # 适配
+  flutter_screenutil: ^4.0.3+2
+  # 轻提示
+  bot_toast: ^3.0.5
+  # 路由管理
+  fluro: ^1.7.8
 dev_dependencies:
   flutter_test:
     sdk: flutter

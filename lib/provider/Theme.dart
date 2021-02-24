@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 
 class ThemeProvider with ChangeNotifier {
@@ -9,16 +8,23 @@ class ThemeProvider with ChangeNotifier {
 
   static Color primaryColor = Color(0xFF29ABE2);
 
+  double fontSize = 18;
+
   changeThemeMode(){
     themeMode = themeMode == 'dark'?'light':'dark';
     notifyListeners();
   }
 
+  //改变主题颜色
   changePrimaryColor(){
     primaryColor = Colors.orange;
     notifyListeners();
   }
 
+  changeFontSize(){
+    
+    notifyListeners();
+  }
 
   themeData(){
     ThemeData themeData = ThemeData(
@@ -27,10 +33,15 @@ class ThemeProvider with ChangeNotifier {
         color: primaryColor
       ),
       appBarTheme: AppBarTheme(
-        color:themeMode=="dark"?Colors.black.withOpacity(0.6):primaryColor, 
-      )
+        brightness: themeMode=="dark"?Brightness.dark:Brightness.light,
+        elevation: 0,
+        color:themeMode=="dark"?Colors.grey[800]:Colors.white, 
+        actionsIconTheme: IconThemeData(
+          color: primaryColor
+        ),
+        
+      ),
     );
-
     return themeData;
   }
 }

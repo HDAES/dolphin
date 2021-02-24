@@ -25,6 +25,8 @@ dependencies:
   bot_toast: ^3.0.5
   # 路由管理
   fluro: ^1.7.8
+  # 抽屉
+  flutter_inner_drawer: ^0.5.7+2
 dev_dependencies:
   flutter_test:
     sdk: flutter

@@ -10,9 +10,15 @@ class SetPage extends StatelessWidget {
         backgroundColor:Colors.transparent,
         title: Text("SETTINGS",
           style: TextStyle(
+            fontFamily: "Monaco",
             color: Theme.of(context).textTheme.bodyText1.color
           ),
         ),
+      ),
+      body: ListView(
+        children: [
+          Text('13')
+        ],
       ),
     );
   }
